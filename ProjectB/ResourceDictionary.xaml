@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ProjectB;assembly=ProjectB">
+
+    <!--<local:StringToBrushConverter x:Key="StringBrushConverter"/>-->
+    <local:ColorSettings x:Key="Colors"/>
+
+    <Style x:Key="RectangleHeaderFillStatic" TargetType="Rectangle">
+        <Setter Property="Fill" Value="#F8CBAD"/>
+    </Style>
+
+    <Style x:Key="RectangleHeaderFillDynamic" TargetType="Rectangle">
+        <Setter Property="Fill" Value="{Binding Source={StaticResource Colors}, Path=ColorHeader}"/>
+    </Style>
+
+</ResourceDictionary>
